@@ -28,12 +28,21 @@ public class UserServiceTest {
     }
 
     @Test
-    public void getUsers() {
+    public void getUsersTest() {
 
         List<User> usersList = new ArrayList<>( Arrays.asList(new User(0,"Micheal","Blade",20),
                 new User(1,"Micheal","Blade",20)));
         assertEquals(users, usersList);
     }
+
+    @Test
+    public void getUserTest(){
+        User user =  new User(1,"Micheal","Blade",20);
+
+
+        assertEquals(user, userService.getUser(1));
+    }
+
 
 
     @Test

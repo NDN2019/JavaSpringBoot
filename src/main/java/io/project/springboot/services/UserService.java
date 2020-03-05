@@ -17,6 +17,8 @@ public class UserService {
     List<User> users = new ArrayList<>( Arrays.asList(new User(0,"Micheal","Blade",20),
             new User(1,"Micheal","Blade",20)));
 
+
+
     public List<User> getUsers() {
         return users;
     }
@@ -38,17 +40,13 @@ public class UserService {
 
 
         return "User updated";
-
-
-
-
     }
 
     public  String addUser(User user){
 
         if(Optional.ofNullable(user).isPresent()){
             users.add(user);
-            return "200";
+            return "User successfully added";
         }
         return "Adding user failed";
     }
