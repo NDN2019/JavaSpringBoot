@@ -24,6 +24,7 @@ public class UserService {
     public User getUser(int id){
         return users.stream().filter(u -> u.getId() == id).findFirst().get();
     }
+
     public String updatdeUser(int id, User user){
 
         users.stream().filter(x-> x.getId() ==id)
@@ -36,7 +37,7 @@ public class UserService {
                 });
 
 
-        return users.get(id).toString();
+        return "User updated";
 
 
 

@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static org.junit.Assert.assertEquals;
+
 @Service
 
 public class UserServiceTest {
@@ -25,6 +27,14 @@ public class UserServiceTest {
 
     }
 
+    @Test
+    public void getUsers() {
+
+        List<User> usersList = new ArrayList<>( Arrays.asList(new User(0,"Micheal","Blade",20),
+                new User(1,"Micheal","Blade",20)));
+        assertEquals(users, usersList);
+    }
+
 
     @Test
     public void updatdeUserTest(){
@@ -33,14 +43,14 @@ public class UserServiceTest {
 
             userService.updatdeUser(0, user);
 
+            assertEquals("User updated", userService.updatdeUser(0, user));
+
     }
 
 
     @Test
     public  void  del(){
-        userService.userDelete(0);
-
-
+        assertEquals("User deleted",userService.userDelete(0));
     }
 
 
