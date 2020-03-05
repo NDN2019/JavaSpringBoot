@@ -59,7 +59,7 @@ public class UserServiceTest {
 
     @Test
     public  void  del(){
-        assertEquals("User deleted",userService.userDelete(0));
+        assertEquals("Use deleted",userService.userDelete(0));
     }
 
 
