@@ -8,12 +8,6 @@ pipeline{
 			}
         }
     }
-	stage('test')
-	{
-		steps{
-			bat 'mvn test'
-		
-		}
-	}
+	
 
 }
