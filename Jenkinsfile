@@ -8,7 +8,7 @@ pipeline{
 			}
         }
     }
-	stage('test'')
+	stage('test')
 	{
 		steps{
 			bat 'mce test'
